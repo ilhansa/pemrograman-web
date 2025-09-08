@@ -1,0 +1,11 @@
+.link{
+    font-size: 40pt;
+}
+
+.link:hover{
+    color:  green;
+}
+
+.link:link{
+    color : yellow;
+}

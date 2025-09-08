@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Tugas Praktikum </title>
+        <link rel="stylesheet" type="text/css" href="style1.css">
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <div class="box3 collapsed" id="box3">
+            <button class="toggle-btn" onclick="togglebox3()">
+                <svg width="30" height="30" viewbox="0 0 24 24">
+                    <path fill="black" d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z" />
+                </svg>
+            </button>
+                <div class="box3-content" id="box3Content">
+                    <ul>
+                        <li><a href="https://github.com/ilhansa" target="blank"> github </a></li>
+                    </ul>
+                </div>
+        </div>
+
+        <div class="container">
+            <div class="box1">
+                <h1> Profil </h1>
+                <p>
+                    Nama: Ilhan Salih Ilmansyah
+                    <br>
+                    Kelas: SIB 2A
+                </p>
+            </div>
+
+            <div class="box2">
+                    <h1> Halo </h1>
+                    <p>
+                        Namaku Ilsa, seorang mahasiswa jurusan Teknologi Informasi, prodi D4 Sistem Informasi Bisnis di Polinema. Sebenarnya dulu aku bercita-cita jadi dokter, tapi takdir membawaku ke dunia teknologi. Walaupun begitu, aku tetap berusaha menikmati dan mendalami bidang ini.
+
+                        Sehari-hari, aku banyak menghabiskan waktu dengan membaca hingga tuntas dan menonton vlog idol K-pop yang jadi hiburan utamaku. Dalam pemrograman, aku masih termasuk pemula, tapi aku berusaha belajar terus. Sekarang aku sering mengotak-atik C, Java, Solidity, bahkan sampai bikin sistem stablecoin sendiri lewat kontrak pintar di Foundry. Aku juga pernah mencoba bikin distro Linux lewat metode LFS, meskipun itu cukup menantang.
+
+                        Aku punya rasa penasaran yang besar—seringkali aku bertanya hal-hal teknis dengan detail, entah itu tentang CSS, SQL, atau konsep OOP. Kadang aku butuh penjelasan yang sederhana, bahkan yang bisa dimengerti anak SD, supaya aku makin paham.
+
+                        Di luar dunia coding, aku orang yang cukup santai, tapi serius kalau sudah menyangkut hal yang menarik minatku.
+                    </p>
+            </div>
+
+        <script>
+            function togglebox3() {
+                const box3 = document.getElementById("box3");
+                const content = document.getElementById("box3Content")
+                
+                if (box3.classList.contains("collapsed")) {
+                    box3.style.maxHeight = content.scrollHeight + 25 + "px";
+                    box3.classList.remove("collapsed");
+                } else {
+                    box3.style.maxHeight = "50px";
+                    box3.classList.add("collapsed");
+                }
+            }
+        </script>
+    </body>
+</html>

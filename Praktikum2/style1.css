@@ -1,0 +1,92 @@
+html, body, .box3 {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.box3 {
+    width: 100%;
+    background: rgb(189, 189, 255);
+    padding-top: 20px;
+    color: white;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+    position: relative;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
+    height: 100vh;
+}
+
+.container {
+    display: flex;     
+    gap: 20px;
+    max-width: 1000px;
+    box-sizing: border-box;
+    height: calc(100vh - 50px);
+}
+
+.box3.collapsed {
+    max-height: 50px;
+}
+
+.box3.collapsed .box3-content {
+    display: block;
+}
+
+.box1 {
+    flex: 1;
+    top: 0;
+    background-color: rgb(189, 189, 255);
+    color: white;
+    padding: 10px;
+    height: 100vh;
+}
+
+.box2 {
+    flex: 2;
+    padding: 10px;
+    color: black;
+    overflow: auto;
+}
+
+.hidden {
+    display: none;
+}
+
+ul {
+    list-style-type: none;
+    padding: 10px;
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    font-size: 24px;
+    transition: color 0.5s ease;
+}
+
+a:hover {
+    color : white;
+    transform: scale(1.2);
+}
+
+.toggle-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.toggle-btn svg {
+    display: block;
+}
