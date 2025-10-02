@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="styleSlideShow.css">
+        <script src="jquery-3.7.1.js"></script>
+        <script>
+            $(document).ready(function() {
+                var i = 0;
+
+                // sembunyikan semua dulu
+                $('.slidertitle, #slider img').hide();
+
+                // tampilkan gambar pertama
+                $('#sliderImage1, #title1').show();
+
+                // jalankan otomatis tiap 3 detik
+                setInterval(showNextImage, 3000);
+
+                function showNextImage() {
+                    // sembunyikan gambar & title sekarang
+                    $('#sliderImage' + (i+1)).fadeOut(1000);
+                    $('#title' + (i+1)).fadeOut(1000);
+
+                    // pindah ke gambar berikutnya
+                    i = (i + 1) % 3; // looping 0 → 1 → 2 → balik ke 0
+
+                    // tampilkan gambar & title berikutnya
+                    $('#sliderImage' + (i+1)).fadeIn(1000);
+                    $('#title' + (i+1)).fadeIn(1000);
+                }
+            });
+        </script>
+    </head>
+    <body>
+        <div id="slider">
+            <img id="sliderImage1" src="../img/gambar1.jpeg">
+            <div class="slidertitle" id="title1">gambar 1</div>
+
+            <img id="sliderImage2" src="../img/gambar2.jpeg">
+            <div class="slidertitle" id="title2">gambar 2</div>
+
+            <img id="sliderImage3" src="../img/gambar3.jpg">
+            <div class="slidertitle" id="title3">gambar 3</div>
+        </div>
+    </body>
+</html>
