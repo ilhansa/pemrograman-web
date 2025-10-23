@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Multiupload dokumen </title>
+</head>
+<body>
+    <form action="proses_upload.php" method="post" enctype="multipart/form-data">
+        <input type="file" name="files[]" multiple="multiple" accept=".pdf, .doc, .docx" id="fileToUpload">
+        <input type="submit" value="unggah">
+    </form>
+</body>
+</html>
